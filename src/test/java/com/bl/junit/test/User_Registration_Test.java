@@ -21,39 +21,39 @@ public class User_Registration_Test {
 	User_Registration user1 = new User_Registration();
 
 	@Test
-	public void check_First_Name() {
+	public void check_First_Name() throws UserRegistrationException {
 
 		boolean firstname = user1.firstName();
 		Assertions.assertEquals(true, firstname);
-		//Assertions.assertEquals(false, firstname);
+		
 	}
 
 	@Test
-	public void check_Second_Name() {
+	public void check_Second_Name() throws UserRegistrationException{
 		boolean lastname = user1.secondName();
 		Assertions.assertEquals(true, lastname);
-		//Assertions.assertEquals(false, lastname);
+		
 	}
 
 	@Test
-	public void check_Email() {
+	public void check_Email() throws UserRegistrationException{
 		boolean email = user1.checkEmail("yashaswini@gmail.com");
 		Assertions.assertEquals(true , email,"yashaswini@gmail.com");
-		//Assertions.assertEquals(false, email);
+		
 	}
 
 	@Test
-	public void check_Phone_Number() {
+	public void check_Phone_Number() throws UserRegistrationException{
 		boolean phonenumber = user1.phoneNumber();
 		Assertions.assertEquals(true, phonenumber);
-		//Assertions.assertEquals(false, phonenumber);
+		
 	}
 
 	@Test
-	public void check_Password() {
+	public void check_Password() throws UserRegistrationException{
 		boolean password = user1.password();
 		Assertions.assertEquals(true ,password);
-		//Assertions.assertEquals(false, password);
+		
 	}
 
 }

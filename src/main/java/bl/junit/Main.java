@@ -12,10 +12,10 @@ public class Main {
 		User_Registration user = new  User_Registration();
 		user.firstName();
 		user.secondName();
-		user.checkEmail();
+		user.checkEmail("abc.100@gmail.com");
 		user.phoneNumber();
 		user.password();
-		user.checkSampleEmail();
+		user.checkEmail("abc-100@yahoo.com");
 	
 	}
 }
