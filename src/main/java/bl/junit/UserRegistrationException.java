@@ -1,4 +1,4 @@
-package com.bl.junit.test;
+package bl.junit;
 
 public class UserRegistrationException extends RuntimeException {
 	enum ExceptionType{

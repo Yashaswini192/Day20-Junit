@@ -14,6 +14,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized.Parameters;
 
+import bl.junit.UserRegistrationException;
 import bl.junit.User_Registration;
 
 public class User_Registration_Test {
