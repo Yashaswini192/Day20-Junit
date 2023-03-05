@@ -19,42 +19,50 @@ import bl.junit.User_Registration;
 
 public class User_Registration_Test {
 
-	User_Registration user1 = new User_Registration();
 
 	@Test
 	public void check_First_Name() throws UserRegistrationException {
 
-		boolean firstname = user1.firstName();
-		Assertions.assertEquals(true, firstname);
-		
+		User_Registration name = new User_Registration();
+
+		Assertions.assertEquals("Yashaswini", name.firstname.lambda("Yashaswini"));
+
 	}
 
 	@Test
 	public void check_Second_Name() throws UserRegistrationException{
-		boolean lastname = user1.secondName();
-		Assertions.assertEquals(true, lastname);
-		
+
+		User_Registration secondName = new User_Registration();
+
+		Assertions.assertEquals("Voruganti", secondName.secondName.lambda("Voruganti"));
+
 	}
 
 	@Test
 	public void check_Email() throws UserRegistrationException{
-		boolean email = user1.checkEmail("yashaswini@gmail.com");
-		Assertions.assertEquals(true , email,"yashaswini@gmail.com");
-		
+
+		User_Registration email = new User_Registration();
+
+		Assertions.assertEquals("yash@gmail.com", email.email.lambda("yash@gmail.com"));
+
 	}
 
 	@Test
 	public void check_Phone_Number() throws UserRegistrationException{
-		boolean phonenumber = user1.phoneNumber();
-		Assertions.assertEquals(true, phonenumber);
-		
+
+		User_Registration phoneNumber = new User_Registration();
+
+		Assertions.assertEquals("91 9666324594", phoneNumber.phoneNumber.lambda("91 9666324594"));
+
 	}
 
 	@Test
 	public void check_Password() throws UserRegistrationException{
-		boolean password = user1.password();
-		Assertions.assertEquals(true ,password);
-		
+
+		User_Registration password = new User_Registration();
+
+		Assertions.assertEquals("Tgsy6%gs", password.password.lambda("Tgsy6%gs"));
+
 	}
 
 }

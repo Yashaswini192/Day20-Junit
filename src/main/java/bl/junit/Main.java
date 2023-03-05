@@ -10,12 +10,17 @@ public class Main {
 		System.out.println("welcome to Regex");
 		
 		User_Registration user = new  User_Registration();
-		user.firstName();
-		user.secondName();
-		user.checkEmail("abc.100@gmail.com");
-		user.phoneNumber();
-		user.password();
-		user.checkEmail("abc-100@yahoo.com");
-	
+		Scanner s = new Scanner(System.in);
+
+		System.out.println("Enter FirstName:");
+		String firstName = s.nextLine();
+		System.out.println("Enter SecondName:");
+		String secondName = s.nextLine();
+		System.out.println("Enter Email:");
+		String email = s.nextLine();
+		System.out.println("enter PhoneNumber:");
+		String phoneNumber = s.nextLine();
+		System.out.println("enter Password:");
+		String password = s.nextLine();
 	}
 }

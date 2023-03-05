@@ -6,18 +6,14 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class User_Registration {
-	Scanner s = new Scanner(System.in);
 
-	public boolean firstName() {
-		//UC1
-		System.out.println("Enter FirstName:");
-		String firstname = s.nextLine();
 
+	public Lambda  firstname = result ->{
 		try {
-			boolean result = (Pattern.matches("^[A-Z]{1}[a-z]{2,}$", firstname));
 
-			if(!result) {
-				return true;
+			if(Pattern.matches("^[A-Z]{1}[a-z]{2,}$", result)) {
+				return result;
+				//System.out.println(result);
 			}	else {
 				throw new UserRegistrationException(UserRegistrationException.ExceptionType.FIRSTNAME,"Please Enter FIRST NAME");
 			}
@@ -25,73 +21,54 @@ public class User_Registration {
 		catch(UserRegistrationException e){
 			throw new UserRegistrationException(UserRegistrationException.ExceptionType.FIRSTNAME,"Please Enter Valid Name");
 		}	
-	}
+	};
 
-	public boolean secondName() {
-		//UC2
-		System.out.println("Enter SecondName:");
-		String lastName = s.nextLine();
+	public Lambda secondName = result1 -> {
 		try {
-			boolean result1 = (Pattern.matches("^[A-Z]{1}[a-z]{2,}$", lastName));
-			if(!result1) {
-				return true;
+			if(Pattern.matches("^[A-Z]{1}[a-z]{2,}$", result1))
+			{
+				return result1;
 			}	else {
 				throw new UserRegistrationException(UserRegistrationException.ExceptionType.SECONDNAME," Enter second NAME");
 			}
 		}
 		catch(UserRegistrationException e){
 			throw new UserRegistrationException(UserRegistrationException.ExceptionType.SECONDNAME,"Enter Valid second Name");
-		}	
+		}
+	};
 
-	}
-	public boolean checkEmail(String email) {
-		//UC3
-		System.out.println("Enter Email:");
-		email = s.nextLine();
-
+	public Lambda email = result2 -> {
 		try {
-			boolean result2 = (Pattern.matches("^[A-z]+[a-zA-Z0-9]*[-._+/]?+[a-zA-Z0-9]+[@]{1}[a-z0-9]+[.]{1}[a-z]+[.]?[a-z]+$", email));
-			if(!result2) {
+			if(Pattern.matches("^[A-z]+[a-zA-Z0-9]*[-._+/]?+[a-zA-Z0-9]+[@]{1}[a-z0-9]+[.]{1}[a-z]+[.]?[a-z]+$", result2)){
 
-				return true;
+				return result2;
 			}	else {
 				throw new UserRegistrationException(UserRegistrationException.ExceptionType.EMAIL,"Enter email");
 			}
 		}
 		catch(UserRegistrationException e){
 			throw new UserRegistrationException(UserRegistrationException.ExceptionType.EMAIL," Enter valid emial");
-		}	
+		}
+	};	
 
-	}
-
-	public boolean phoneNumber() {
-		//UC4
-		System.out.println("enter PhoneNumber:");
-		String phoneNumber = s.nextLine();
+	public Lambda phoneNumber = result3 -> {
 		try {
-			boolean result3 = (Pattern.matches("^[0-91]{2}[\\s]?[0-9]{10}$", phoneNumber));
-			if(!result3) {
-				return true;
+			if(Pattern.matches("^[0-91]{2}[\\s]?[0-9]{10}$", result3)){
+				return result3;
 			}	else {
 				throw new UserRegistrationException(UserRegistrationException.ExceptionType.PHONENUMBER," Enter Phonenumber");
 			}
 		}
 		catch(UserRegistrationException e){
 			throw new UserRegistrationException(UserRegistrationException.ExceptionType.PHONENUMBER," Enter Valid Phonenumber");
-		}	
+		}
+	};
 
-	}
-
-	public boolean password() {
-		//UC5-password
-
-		System.out.println("enter Password:");
-		String password = s.nextLine();
+	public Lambda password = result1 -> {
 		try {
-			boolean result4 = (Pattern.matches("((?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&]).{8}$)", password));
-			if(!result4) {
+			if(Pattern.matches("((?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&]).{8}$)", result1)) {
 
-				return true;
+				return result1;
 			}	else {
 				throw new UserRegistrationException(UserRegistrationException.ExceptionType.PASSWORD," Enter Password");
 			}
@@ -100,9 +77,11 @@ public class User_Registration {
 			throw new UserRegistrationException(UserRegistrationException.ExceptionType.PASSWORD," Enter Valid Password");
 		}	
 
-	}
+	};
+}
 
-	public class MultipleEmailtest {
+
+/*	public class MultipleEmailtest {
 		private String email1;
 
 
@@ -160,8 +139,6 @@ public class User_Registration {
 
 
 	}
-
-
-}
+ */
 
 
